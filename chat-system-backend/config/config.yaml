@@ -1,0 +1,30 @@
+# 配置文件
+app:
+  name: chat-system
+  version: 1.0.0
+  env: development # development, testing, production
+
+# PostgreSQL数据库配置
+database:
+  type: postgres
+  host: localhost
+  port: 5432
+  username: xuzeipan
+  password: 20020722
+  dbname: chat_system
+  sslmode: disable
+  max_idle_conns: 10
+  max_open_conns: 100
+  conn_max_lifetime: 3600 # 秒
+
+# JWT配置
+jwt:
+  secret: 20020722 # 请更换为实际的密钥，生产环境应使用环境变量
+  expire_hours: 24 # token有效期（小时）
+
+# 服务器配置
+server:
+  port: 8080
+  read_timeout: 5 # 秒
+  write_timeout: 5 # 秒
+  idle_timeout: 60 # 秒
