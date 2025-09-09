@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function timeBar() {
+function TimeBar() {
     const [currentTime, setCurrentTime] = useState(new Date())
 
     useEffect(() => {
@@ -33,4 +33,4 @@ function timeBar() {
     )
 }
 
-export default timeBar
+export default TimeBar
